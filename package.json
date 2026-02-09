@@ -1,0 +1,30 @@
+{
+  "name": "algochat-cli",
+  "version": "0.1.0",
+  "description": "CLI client for AlgoChat — encrypted on-chain messaging on Algorand",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "algochat": "dist/index.js"
+  },
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target node",
+    "dev": "bun run src/index.ts",
+    "typecheck": "bunx tsc --noEmit"
+  },
+  "dependencies": {
+    "algosdk": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.7.0"
+  },
+  "keywords": ["algorand", "algochat", "cli", "messaging", "on-chain"],
+  "author": "corvid-agent",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/corvid-agent/algochat-cli"
+  }
+}
